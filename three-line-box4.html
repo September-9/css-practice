@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		header, footer{
+			height:30px;
+			line-height: 30px;
+			text-align: center;
+			color:#fff;
+			background: #aaa;
+		}
+		.container{
+			float:left;
+			width:960px;
+			text-align: center;
+			overflow: hidden;//截去超过.container标签之外的多余部分
+			color:#fff;
+		}
+		.mainBox{
+			float:left;
+			width:960px;
+			margin-bottom:-9999px;
+			padding-bottom:9999px;
+		}
+		.mainBox .content{
+			width:440px;
+			margin:0 210px 0 310px;
+			background: #000;
+		}
+		.subMainBox{
+			float: left;
+			width:300px;
+			margin-left:-960px;
+			margin-bottom: -9999px;
+			padding-bottom: 9999px;
+			background: #666;
+		}
+		.sideBox{
+			float:left;
+			width:200px;
+			margin-left: -200px;
+			margin-bottom: -9999px;
+			padding-bottom: 9999px;
+			background: #666;
+		}
+		footer{
+			clear:both;
+		}
+	</style>
+</head>
+<body>
+	<header>头部信息</header>
+	<div class="container">
+	  <div class="mainBox">
+	  	<div class="content">主要内容信息</div>
+	  </div>
+		<div class="subMainBox">次要内容信息</div>
+		<div class="sideBox">侧边栏</div>
+	</div>	
+	<footer>底部信息</footer>
+</body>
+</html>

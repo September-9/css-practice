@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	  p{
+	  	color:blue;
+	  	font-size: 20px;
+	  }
+		.select{
+			color:#fff;
+			background: yellow;
+			cursor: pointer;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+	<p>Create a new jQuery object with elements added to the set of matched elements.</p>
+	<script type="text/javascript">
+		var newText = $("p").text().split(" ").join('</span> <span>');
+		newText = '<span>'  + newText + '</span>';
+		$('p')
+			.html(newText)
+			.find('span')
+			.hover(function(){
+				$(this).addClass('select');
+			},function(){
+				$(this).removeClass('select');
+			})
+			.end()
+			.find(":contains('t')")
+				.css({
+		      "font-style": "italic",
+		      "font-weight": "bolder"
+		    });
+	</script>
+</body>
+</html>
